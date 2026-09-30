@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netbirdexport"
+version = "0.1.0"
+description = "Export a NetBird account inventory (peers, users, setup keys, groups) to CSV and JSON in one command, using your own access token. Standard library only."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Younes Z." }]
+keywords = [
+  "netbird",
+  "wireguard",
+  "mesh vpn",
+  "inventory",
+  "export",
+  "csv",
+  "audit",
+  "backup",
+  "self hosted",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: System Administrators",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Networking",
+  "Topic :: System :: Systems Administration",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Rezarys/netbirdexport"
+Issues = "https://github.com/Rezarys/netbirdexport/issues"
+
+[project.scripts]
+netbirdexport = "netbirdexport.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
